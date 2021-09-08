@@ -1,0 +1,23 @@
+{
+  "name": "rocketq",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido para gerenciar perguntas anônims de usuários direcionadas ao dono da página. Projeto desenvoldido na semana NLW Rocketseat na missão discovery",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon .",
+    "inferno": "node src/server.js",
+    "init-db": "node src/db/init.js"
+  },
+  "keywords": [],
+  "author": "Helena Antoni",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.8"
+  }
+}

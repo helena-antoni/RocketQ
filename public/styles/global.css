@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    --black:#0D114F; 
+    --white:#FAFAFA;
+    --red:#E83F58;
+    --light-blue:#E0ECFF;
+    --blue:#3485FF;
+    --background: #F6FaFF;
+    --overlay:#040911;
+    --icons-details:#A5B0C1;
+
+    --grey-dark:#4D5E77;
+    --grey-blue:#A1B2CD;
+    --grey-light:#E5EAF1;
+    --grey-medium: #eaecf2;
+
+    /*substitui o px 
+    1 rem =16px (user agent) = 100% (user agent)
+    
+    */
+    font-size:62.5%;/* 10px */
+
+}
+body{
+    display: flex;
+    height: 100vh; /* view height port total da tela */
+    background:var(--background);
+
+}
+
+body, button, input, textarea{
+    font-size: clamp(14px, 1.6rem, 2vw);/* intervalo de tamanho, 
+    o minimo que a letra pode chegar é 14 px, 16 padrão,  width * vw */
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
+
+}
+.content{
+    width:100%;
+    margin: 0 auto;
+    
+}
+
+.sr-only{
+    position:absolute;
+    height: 1px;
+    width: 1px;
+    padding:0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width:0;
+  
+}
+
+
+input, button, .button{
+    border-radius: .8rem;
+    height:5rem;
+}
+
+button, .button{
+    font-family: 'Poppins';
+    font-weight: 500;
+    line-height: 0;/*para não ficar desalinhado com os botoes*/
+    display: flex;
+    align-items: center;/*alinha na vertical*/
+    justify-content:center; /*text-align não justifica a imagem*/
+    background: var(--blue);
+    color: var(--white);
+    transition: filter .2s;
+    cursor: pointer; /*mãozinha*/
+
+}
+
+button:hover, .button:hover{
+    filter: brightness(1.2); /*cria brilho*/
+}
+
+button >img,
+.button >img{
+    margin-right:1rem;
+    width: 2rem;
+
+}
+
+button.outlined,
+.button.outlined{
+    background:var(--white);
+    color: var(--blue);
+    border: .2rem solid var(--blue);
+   
+}
+
+button.red, /* modal tem certeza que deseja excluir*/
+.button.red{
+    background: var(--red);
+    color: var(--white);
+}
+
+
+button.grey,
+.button.grey{
+    background: var(--grey-light);
+    color: var(--grey-dark);
+}
+
+
+
+/*  header */
+ .content header{
+     width: 80%;    
+     margin: 3.5rem auto;
+
+ }
+
+ .content header img{
+    width: 16.7rem;
+ }
+
+
+
+
+
+
+
+
+
